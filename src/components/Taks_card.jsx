@@ -1,4 +1,7 @@
-export function TaksCard({ taks, deleteTaks }) {
+import { useContext } from "react";
+import { TaksContext } from "../context/Taks_context";
+export function TaksCard({ taks }) {
+  const {deleteTaks} = useContext(TaksContext);
   return (
     <div>
       <h1>{taks.title}</h1>

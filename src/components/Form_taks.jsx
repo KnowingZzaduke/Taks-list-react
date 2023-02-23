@@ -1,7 +1,9 @@
-import { useState } from 'react';
-export function Form({crearTaks}){
+import { useState, useContext} from 'react';
+import { TaksContext } from '../context/Taks_context';
+export function Form(){
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const {crearTaks} = useContext(TaksContext)
     const handleSubmit = (e) => {
         e.preventDefault();
         crearTaks(title, description);
