@@ -1,10 +1,10 @@
-import { Form } from './components/Form_taks';
-import { Taks } from './components/Taks_list';
+import { FormTask } from './components/Form_tasks';
+import { Task } from './components/Tasks_list';
 export function App(){
     return (
         <>
-        <Form/>
-        <Taks/>
+        <FormTask/>
+        <Task/>
         </>
     )
     

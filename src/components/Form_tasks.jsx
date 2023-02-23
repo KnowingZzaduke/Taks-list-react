@@ -1,12 +1,14 @@
 import { useState, useContext} from 'react';
-import { TaksContext } from '../context/Taks_context';
-export function Form(){
+import { TaskContext } from '../context/Tasks_context';
+
+export function FormTask(){
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const {crearTaks} = useContext(TaksContext)
+    const {crearTask} = useContext(TaskContext);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        crearTaks(title, description);
+        crearTask(title, description);
         setTitle('');
         setDescription('');
     }
@@ -17,6 +19,4 @@ export function Form(){
             <button>Agregar Tarea</button>
         </form>
     )
-    
-    
 }
