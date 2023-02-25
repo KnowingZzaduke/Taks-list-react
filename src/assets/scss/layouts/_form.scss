@@ -1,0 +1,38 @@
+@use '../base/variables' as v;
+
+.content_formulario{
+    h1{
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+    .formulario_agregar-tareas{
+        display: grid;
+        row-gap: 20px;
+        input{
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid v.$negro;
+            box-shadow: 0 0 3px 1px;
+        } 
+
+        textarea{
+            border-radius: 10px;
+            border: 1px solid v.$negro;
+            box-shadow: 0 0 3px 1px v.$negro;
+        }
+
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: v.$verdeOscuro;
+            color: v.$blanco;
+            transition: .25s ease;
+            &:hover{
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}

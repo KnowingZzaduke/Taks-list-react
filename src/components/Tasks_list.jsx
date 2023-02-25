@@ -7,7 +7,7 @@ export function Task() {
     return <h1>No hay tareas</h1>;
   }
   return (
-    <div>
+    <div className="content_all-tasks">
       {tasks.map((tasks) => (
         <TaskCard key={tasks.id} tasks={tasks}/>
       ))}

@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+.content_all-tasks{
+    display: grid;
+    .tarea{
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 300px 200px 200px);
+        align-items: center;
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: v.$verdeClaro;
+            color: v.$blanco;
+            transition: .25s ease;
+
+            &:hover{
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}
