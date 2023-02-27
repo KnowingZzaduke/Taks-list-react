@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { TaskContext } from "../context/Tasks_context";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 export function FormTask() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -8,17 +8,16 @@ export function FormTask() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(title === "" || description === ""){
-        Swal.fire({
-            title: "Por favor llena todos los campos",
-            icon: "warning"
-        })
-    }else{
-        crearTask(title, description);
-        setTitle("");
-        setDescription("");
+    if (title === "" || description === "") {
+      Swal.fire({
+        title: "Por favor llena todos los campos",
+        icon: "warning",
+      });
+    } else {
+      crearTask(title, description);
+      setTitle("");
+      setDescription("");
     }
-    
   };
   return (
     <div className="content_formulario">

@@ -1,8 +1,7 @@
 export const tasks = [
     {
-        id: Number,
+        id: "",
         title: "",
         description: ""
     }
 ]
-
